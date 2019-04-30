@@ -1,0 +1,14 @@
+h1 {
+  font-size: 30px;
+  text-align: center;
+}
+
+form {
+  text-align: center;
+}
+
+body, content {
+  background-color: #AECFD3;
+  font-size: 14px;
+  text-align: center;
+}
