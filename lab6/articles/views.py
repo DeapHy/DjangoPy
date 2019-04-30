@@ -18,14 +18,14 @@ def registration(request):
             return render(request, 'registration.html', {'form': form})
         if form['login'] and form['email'] and form['email']:
             User.objects.create_user(form['login'], form['email'], form['password'])
-            return redirect('login')
+            return redirect('auth')
         else:
             form['errors'] = u"Не все поля заполнены"
             return render(request, 'registration.html')
     else:
         return render(request, 'registration.html')
 
-def login(request):
+def auth(request):
     if request.method == 'POST':
         form = {
             'login': request.POST['login'],
@@ -36,12 +36,12 @@ def login(request):
             user = authenticate(username=form['login'], password=form['password'])
             if user:
                 login(request, user)
-                redirect
+                return redirect('archive')
             else:
                 form['errors'] = u'Login or Password was incorrect. Try again'
                 return render(request, 'login.html', {'form': form})
         else:
-            form['errors'] = u'This user isnt registered yet or you not entered all nesessary fields.'
+            form['errors'] = u'This user isnt registered yet or you not entered all required fields.'
             return render(request, 'login.html', {'form': form})
     else:
         return render(request, 'login.html')

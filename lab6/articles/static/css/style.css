@@ -5,6 +5,14 @@ body {
   font-family: cursive;
 }
 
+.header-left {
+  text-align: left;
+}
+
+.header-right {
+  text-align: right;
+}
+
 .article {
   background: #ffffff;
   font-family: Tahoma, Arial, sans-serif;

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Django Public Blog - создать статью</title>
+        <title>Авторизация</title>
         <link rel="stylesheet" href="/static/css/Creation_form.css">
     </head>
     <body>
@@ -9,7 +9,7 @@
             <h1>Вход</h1>
             <form method="POST" class='regform'> {% csrf_token %}
                 <input type="text" name="login" placeholder="Login" value="{{ form.login }}"> <br>
-                <input type='password' name='pass' placeholder='Password' value='{{ form.password }}'> <br>
+                <input type='password' name='password' placeholder='Password' value='{{ form.password }}'> <br>
                 <input type="submit" value="Send"> <br>
             </form>
             {{ form.errors }}
