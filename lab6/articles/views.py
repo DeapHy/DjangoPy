@@ -2,7 +2,7 @@ from .models import Article
 from django.shortcuts import render, redirect
 from django.http import Http404
 from django.contrib.auth.models import User
-from django.contrib.auth import authenticate, login
+from django.contrib.auth import authenticate, login, logout
 
 def registration(request):
     if request.method == 'POST':
@@ -46,9 +46,17 @@ def auth(request):
     else:
         return render(request, 'login.html')
 
+def deauth(request):
+    logout(request)
+    message='You successfully Logged out.'
+    return render(request, 'archive.html', {"message": message})
 
 def archive(request):
-    return render(request, 'archive.html', {"posts": Article.objects.all()})
+    if request.user.is_authenticated:
+        return render(request, 'archive.html', {"posts": Article.objects.all()})
+    else:
+        message = 'You need to Log In to see content on this page'
+        return render(request, 'archive.html', {'message': message})
 
 def get_article(request, article_id):
     try:

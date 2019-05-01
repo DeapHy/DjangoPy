@@ -24,5 +24,6 @@ urlpatterns = [
     url(r'^article/(?P<article_id>\d+)$', views.get_article, name='get_article'),
     path('article/new', views.create_post, name='Create_Post'),
     path('registration/', views.registration, name='registration'),
-    path('login/', views.auth, name='auth')
+    path('login/', views.auth, name='auth'),
+    path('logout', views.deauth, name='deauth')
 ]

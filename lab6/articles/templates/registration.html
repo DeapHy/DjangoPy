@@ -1,10 +1,5 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>Django Public Blog - создать статью</title>
-        <link rel="stylesheet" href="/static/css/Creation_form.css">
-    </head>
-    <body>
+{% extends "layout.html" %}
+{% block content %}
         <div class="content">
             <h1>Регистрация</h1>
             <form method="POST" class='regform'> {% csrf_token %}
@@ -15,5 +10,4 @@
             </form>
             {{ form.errors }}
         </div>
-    </body>
-</html>
+{% endblock %}

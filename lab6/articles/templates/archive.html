@@ -1,17 +1,6 @@
-<!DOCTYPE html>
-<title> Архив всех статей </title>
-<head>
-<link rel="stylesheet" href="static/css/style.css">
-</head>
-<body class='archive'>
-    <div class="header-left">
-      <a href='/registration'>Reg </a>
-      <a href='/login'>Log </a>
-    </div>
-    <div class='header-right'>
-      <a href=''>Articles </a>
+{% extends "layout.html" %}
+{% block content %}
       <!img src="static/trex.png">
-    </div>
     <div class="archive">
       {% for post in posts %}
       <div class="one-post">
@@ -25,4 +14,4 @@
     <hr>
     {% endfor %}
     </div>
-</body>
+{% endblock %}
