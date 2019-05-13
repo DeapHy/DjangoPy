@@ -1,7 +1,6 @@
 body {
   color: #000000;
   font-family: cursive;
-
 }
 .content {
   text-align: center;
@@ -10,17 +9,13 @@ body {
 a {
   font-style: normal;
   text-decoration: none;
-  color: #000000
+  color: #000000;
 }
 #navbar {
   width: 100%;
   height: 50px;
-  font-size: 17px;
+  font-size: 19px;
   background-color: #C1D2D9;
-}
-h1 {
-  font-size: 30px;
-  font-family: serif;
 }
 #navbar-left {
   float:left;
@@ -35,6 +30,7 @@ h1 {
   text-align: center;
   margin-top: 12px;
   margin-right: 15px;
+
 }
 #info_message {
   font-size: 20px;
@@ -45,7 +41,7 @@ h1 {
   background: #C1D2D9;
   font-weight: lighter;
   line-height: 25px;
-  font-size: 18px;
+  font-size: 19px;
   width: 20%;
   height: 100%;
   float: right;
@@ -72,7 +68,7 @@ h1 {
 }
 .post-title {
     color: #000000;
-    font-size: 30px;
+    font-size: 30px;\
 }
 .one-post {
   color: #000000;
@@ -81,7 +77,9 @@ h1 {
   font-family: Tahoma;
   margin-left: 20px;
   margin-right: 20px;
-  margin-top: 20px;
+  margin-top: 15px;
+  font-family: cursive;
+  font-weight: 1;
 }
 .article-author {
     width: 50%;
@@ -96,4 +94,11 @@ h1 {
 }
 .article-text {
   font-size: 15px;
+}
+.content {
+  text-align: center;
+  font-family: cursive;
+  font-size: 20px;
+  font-weight: bolder;
+  height: 100%;
 }
